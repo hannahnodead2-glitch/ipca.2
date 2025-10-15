@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Homepage de website" name="description"/>
+  <meta content="homepage, ipca, instituto politecnico cavado e ave" name="keywords"/>
+  <title> IPCA </title>
+   <link rel="icon" type="icons/favicon" href="icons/favicon.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js" defer></script>
+  
+  <style>
+
+   @font-face {
+    font-family: "Intro" ;
+    src: url("Intro Bold Alt.otf") format("opentype");
+    font-weight:normal;
+    font-style:normal;
+     }
+  </style>
+ </head>
+ <body>
+
+  <!-- ---------- NAVBAR ---------- -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+   <div class="container">
+    <a class="navbar-brand" href="index.html">
+     <img alt="Logotipo da Universidade" src="imagem/logo.png" style="max-height:70px;"/>
+    </a>
+    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+     <span class="navbar-toggler-icon">
+     </span>
+    </button>
+
+    <!-- Links do menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+       <a class="nav-link" href="__"> Estudar </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="__"> I&amp;D+I </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="__"> Internacional </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="__"> Viver </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="__"> IPCA </a>
+      </li>
+      <li class="nav-item">
+       <a class="loginbtn" href="login.html"> Login </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </nav>
+
+
+  <!-- ---------- CONTEÚDO PRINCIPAL ---------- -->
+  <main class="container my-5">
+   <h1 class="titulo text-left mb-4"> Formulário de Cadastro </h1>
+    <div id="aviso" class="alert d-none" role="alert"></div>
+
+   <!-- Formulário centralizado e limitado a 600px de largura -->
+   <form class="mx-auto" id="myForm" style="max-width: 600px;">
+
+
+    <h1>Informação Pessoal</h1>
+    <!-- Campo: Nome -->
+    <div class="mb-3">
+     <label class="form-label" for="nome" style="font-weight: bold;"> Nome completo </label>
+     <input class="form-control" id="nome" name="nome" type="text" required/>
+    </div>
+  <!-- Campo: Email -->
+    <div class="mb-3">
+     <label class="form-label" for="email" style="font-weight: bold;"> Email </label>
+     <input class="form-control" id="email" name="email" type="text" required/>
+    </div>
+      <!-- Campo: Palavra Passe -->
+    <div class="mb-3">
+     <label class="form-label" for="palavrapasse" style="font-weight: bold;"> Palavra-Passe </label>
+     <input class="form-control" id="password" name="password" type="text" required/>
+    </div>
+
+    <!-- Campo: Instituição-->
+     <div class="mb-3">
+      <label class="form-label" for="instituicao" style="font-weight: bold;"> Instituição </label>
+      <select class="form-select" id="instituicao" name="instituicao">
+       <option value=""> -- Selecione -- </option>
+       <option value="Escola Superior de Gestão"> Escola Superior de Gestão </option>
+       <option value="Escola Superior de Tecnologia"> Escola Superior de Tecnologia </option>
+       <option value="Escola Superior de Design"> Escola Superior de Design </option>
+       <option value="Escola Superior de Hotelaria e Turismo"> Escola Superior de Hotelaria e Turismo </option>
+       <option value="Escola Técnica Superior Profissional"> Escola Técnica Superior Profissional </option>
+       <option value="Escola Superior de Desporto, Bem-Estar e Sistemas Biomédicos"> Escola Superior de Desporto, Bem-Estar e Sistemas Biomédicos </option>
+      </select>
+     </div>
+
+    <!-- Campo: Curso-->
+     <div class="mb-3">
+      <label class="form-label" for="curso" style="font-weight: bold;"> Curso
+      </label>
+      <select class="form-select" id="curso" name="curso">
+       <option value="">  -- Selecione -- </option>
+       <option value=""> -- Licenciaturas -- </option>
+       <option value="Contabilidade"> Contabilidade </option>
+       <option value="Design Audiovisual"> Design Audiovisual </option>
+       <option value="Design Gráfico"> Design Gráfico </option>
+       <option value="Design Industrial"> Design Industrial </option>
+       <option value="Desporto"> Desporto </option>
+       <option value="Engenharia Eletrotécnica e de Computadores"> Engenharia Eletrotécnica e de Computadores </option>
+       <option value="Engenharia Informática Médica"> Engenharia Informática Médica </option>
+       <option value="Engenharia de Sistemas Informáticos"> Engenharia de Sistemas Informáticos </option>
+       <option value="Engenharia e Gestão Industrial"> Engenharia e Gestão Industrial </option>
+       <option value="Engenharia em Desenvolvimento de Jogos Digitais"> Engenharia em Desenvolvimento de Jogos Digitais </option>
+       <option value="Finanças"> Finanças </option>
+       <option value="Fiscalidade"> Fiscalidade </option>
+       <option value="Gestão Hoteleira"> Gestão Hoteleira </option>
+       <option value="Gestão Pública"> Gestão Pública </option>
+       <option value="Gestão de Atividades Turísticas"> Gestão de Atividades Turísticas </option>
+       <option value="Gestão de Empresas"> Gestão de Empresas </option>
+       <option value="Solicitadoria"> Solicitadoria </option>
+       <option value=""> -- Mestrados -- </option>
+       <option value="Auditoria"> Auditoria </option>
+       <option value="Contabilidade e Finanças (APNOR)"> Contabilidade e Finanças (APNOR) </option>
+       <option value="Design Digital"> Design Digital </option>
+       <option value="Design e Desenvolvimento do Produto"> Design e Desenvolvimento do Produto </option>
+       <option value="Direção e Gestão Hoteleira"> Direção e Gestão Hoteleira </option>
+       <option value="Engenharia Eletrónica e de Computadores"> Engenharia Eletrónica e de Computadores </option>
+       <option value="Engenharia Informática"> Engenharia Informática </option>
+       <option value="Engenharia e Gestão Industrial"> Engenharia e Gestão Industrial </option>
+       <option value="Engenharia em Desenvolvimento de Jogos Digitais"> Engenharia em Desenvolvimento de Jogos Digitais </option>
+       <option value="Fiscalidade"> Fiscalidade </option>
+       <option value="Gestão">Gestão </option>
+       <option value="Gestão Autárquica (b-learning)"> Gestão Autárquica (b-learning)* </option>
+       <option value="Gestão das Organizações (APNOR)"> Gestão das Organizações (APNOR) </option>
+       <option value="Gestão do Turismo"> Gestão do Turismo </option>
+       <option value="Ilustração e Animação"> Ilustração e Animação </option>
+       <option value="Inteligência Artificial Aplicada"> Inteligência Artificial Aplicada </option>
+       <option value="Marketing"> Marketing </option>
+       <option value="Marketing Turístico"> Marketing Turístico </option>
+       <option value="Património Cultural Digital"> Património Cultural Digital </option>
+       <option value="Sistemas Integrados de Gestão QAS"> Sistemas Integrados de Gestão QAS </option>
+       <option value="Solicitadoria"> Solicitadoria </option>
+      </select>
+     </div>
+
+   
+
+    <!-- Campo: Nascimento -->
+    <div class="row">
+    <div class="mb-3">
+    <label class="form-label" for="estado_civil" style="font-weight: bold;"> Estado Civil </label>
+    <select class="form-select" id="estado_civil" name="estado_civil">
+       <option value=""> -- Selecione -- </option>
+       <option value="casado"> Casado(a) </option>
+       <option value="divorciado"> Divorciado(a) </option>
+       <option value="solteiro"> Solteiro(a) </option>
+      </select>
+     </div>
+     <div class="mb-3">
+      <label class="form-label" for="nascimento" style="font-weight: bold;"> Data de nascimento </label>
+      <input class="form-control" id="nascimento" name="nascimento" type="date" />
+     </div>
+     <div class="mb-3">
+      <label class="form-label" for="sexo" style="font-weight: bold;"> Sexo </label>
+      <select class="form-select" id="sexo" name="sexo" >
+       <option value=""> -- Selecione -- </option>
+       <option value="masculino"> Masculino </option>
+       <option value="feminino"> Feminino </option>
+      </select>
+     </div>
+    </div>
+
+   
+
+    <!-- Campo: Identificação -->
+      <div class="row">
+          <div class="mb-3">
+      <label class="form-label" for="tipo_de_identificacao" style="font-weight: bold;"> Tipo de Identificação </label>
+      <select class="form-select" id="estado_civil" name="tipo_de_identificacao" >
+       <option value=""> -- Selecione -- </option>
+       <option value="cc"> Cartão de Cidadão </option>
+       <option value="bi"> Bilhete de Identidade </option>
+       <option value="pass"> Passaporte </option>
+      </select>
+     </div>
+    <div class="mb-3">
+     <label class="form-label" for="nidentificacao" style="font-weight: bold;"> Nº Identificação </label>
+     <input class="form-control" id="nidentificacao" name="nidentificacao" pattern="[0-9]{9}" placeholder="912345678" type="tel" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="data" style="font-weight: bold;"> Data de validade </label>
+      <input class="form-control" id="datavalidade" name="datavalidade" type="date" />
+     </div>
+    </div>
+
+
+    <!-- Campo: Nº Contribuinte -->
+    <div class="mb-3">
+     <label class="form-label" for="ncontribuinte" style="font-weight: bold;"> Nº Contribuinte </label>
+     <input class="form-control" id="ncontribuinte" name="ncontribuinte" pattern="[0-9]{9}" placeholder="912345678" type="tel" />
+    </div>
+
+    <h1> Nacionalidade </h1>
+    <!-- Campo: Nacionalidade e Naturalidade -->
+     <div class="mb-3">
+      <label class="form-label" for="nacionalidade" style="font-weight: bold;"> Nacionalidade </label>
+      <input class="form-control" id="nacionalidade" name="nacionalidade" type="text" />
+     </div>
+
+    <!-- Campo: Distrito e Freguesia -->
+    <div class="mb-3">
+      <label class="form-label" for="distrito" style="font-weight: bold;"> Naturalidade, Distrito ou País </label>
+      <input class="form-control" id="distrito" name="distrito" type="text" />
+     </div>
+
+
+    <h1> Afiliação </h1>
+    <!-- Campo: Pai -->
+    <div class="mb-3">
+     <label class="form-label" for="pai" style="font-weight: bold;"> Nome do pai </label>
+     <input class="form-control" id="pai" name="pai" type="text" />
+    </div>
+    <div class="mb-3">
+     <label class="form-label" for="profissao" style="font-weight: bold;"> Profissão </label>
+     <input class="form-control" id="profissao" name="profissao" type="text" />
+    </div>
+    <div class="mb-3">
+     <label class="form-label" for="instrucao" style="font-weight: bold;"> Nível de Instrução </label>
+     <input class="form-control" id="instrucao" name="instrucao" type="text" />
+    </div>
+
+    <!-- Campo: Mae -->
+    <div class="mb-3">
+     <label class="form-label" for="mae" style="font-weight: bold;"> Nome da mãe </label>
+     <input class="form-control" id="mae" name="mae" type="text" />
+    </div>
+    <div class="mb-3">
+     <label class="form-label" for="profissao" style="font-weight: bold;"> Profissão </label>
+     <input class="form-control" id="profissao" name="profissao" type="text" />
+    </div>
+    <div class="mb-3">
+     <label class="form-label" for="instrucao" style="font-weight: bold;"> Nível de Instrução </label>
+     <input class="form-control" id="instrucao" name="instrucao" type="text" />
+    </div>
+
+
+    <h1> Morada </h1>
+    <!-- Campo: Morada -->
+    <div class="mb-3">
+     <label class="form-label" for="morada" style="font-weight: bold;"> Morada </label>
+     <input class="form-control" id="morada" name="morada" type="text" />
+    </div>
+    <div class="row">
+     <div class="mb-3">
+      <label class="form-label" for="codpostal" style="font-weight: bold;"> Cód.Postal </label>
+      <input class="form-control" id="codpostal" name="codpostal" pattern="[0-9]{9}" placeholder="912345678" type="tel" />
+      </div>
+    </div>
+
+    <!-- Campo: Distrito e Freguesia -->
+    <div class="row">
+     <div class="mb-3">
+      <label class="form-label" for="distrito" style="font-weight: bold;"> Distrito </label>
+      <input class="form-control" id="distrito" name="distrito" type="text" />
+     </div>
+     <div class="mb-3">
+      <label class="form-label" for="concelho" style="font-weight: bold;"> Concelho </label>
+      <input class="form-control" id="concelho" name="concelho" type="text" />
+     </div>
+     <div class="mb-3">
+      <label class="form-label" for="freguesia" style="font-weight: bold;"> Freguesia </label>
+      <input class="form-control" id="freguesia" name="freguesia" type="text" />
+     </div>
+    </div>
+
+    <!-- Campo: Deslocamento -->
+    <div class="mb-3">
+  <label for="trabalhador" class="form-label" style="font-weight: bold;"> Deslocado de Residência Permanente?</label>
+  <select id="trabalhador" name="trabalhador" class="form-select" >
+    <option value="">-- Selecione --</option>
+    <option value="sim">Sim</option>
+    <option value="nao">Não</option>
+  </select>
+</div>
+
+    <!-- Campo: Morada Secundario -->
+    <div class="mb-3">
+     <label class="form-label" for="moradasec" style="font-weight: bold;"> Morada Secundária </label>
+     <input class="form-control" id="moradasec" name="moradasec" type="text"/>
+    </div>
+    <div class="row">
+     <div class="mb-3">
+      <label class="form-label" for="codpostal" style="font-weight: bold;"> Cód.Postal </label>
+      <input class="form-control" id="codpostal" name="codpostal" pattern="[0-9]{9}" placeholder="912345678" type="tel"/>
+     </div>
+     <div class="mb-3">
+      <label class="form-label" for="telemovel" style="font-weight: bold;"> Telemóvel </label>
+      <input class="form-control" id="telemovel" name="telemovel" pattern="[0-9]{9}" placeholder="912345678" type="tel"/>
+     </div>
+    </div>
+
+    <!-- Campo: Distrito e Freguesia -->
+    <div class="row">
+     <div class="mb-3">
+      <label class="form-label" for="distrito" style="font-weight: bold;"> Distrito </label>
+      <input class="form-control" id="distrito" name="distrito" type="text"/>
+     </div>
+     <div class="mb-3">
+      <label class="form-label" for="concelho" style="font-weight: bold;"> Concelho </label>
+      <input class="form-control" id="concelho" name="concelho" type="text"/>
+     </div>
+     <div class="mb-3">
+      <label class="form-label" for="freguesia" style="font-weight: bold;"> Freguesia </label>
+      <input class="form-control" id="freguesia" name="freguesia" type="text"/>
+     </div>
+    </div>
+
+
+    <!-- Campo: Trabalhador estudante-->
+    <div class="mb-3">
+    <label for="trabalhador" class="form-label" style="font-weight: bold;">É trabalhador estudante?</label>
+    <select id="trabalhador" name="trabalhador" class="form-select" >
+    <option value="">-- Selecione --</option>
+    <option value="sim">Sim</option>
+    <option value="nao">Não</option>
+    </select>
+    </div>
+
+    <h1> Habilitação Académica </h1>
+    <!-- Campo: Habilitação académica -->
+    <div class="mb-3">
+     <label class="form-label" for="habilitacao" style="font-weight: bold;"> Anterior/Curso Atual </label>
+     <input class="form-control" id="habilitacao" name="habilitacao" type="text" />
+    </div>
+    <div class="mb-3">
+     <label class="form-label" for="escola" style="font-weight: bold;"> Escola </label>
+     <input class="form-control" id="escola" name="escola" type="text" />
+    </div>
+    <div class="mb-3">
+     <label class="form-label" for="curso" style="font-weight: bold;"> Curso </label>
+     <input class="form-control" id="curso" name="escola" type="text" />
+    </div>
+    <div class="mb-3">
+     <label class="form-label" for="pais" style="font-weight: bold;"> País </label>
+     <input class="form-control" id="pais" name="pais" type="text" />
+    </div>
+
+    <h1> Informação de Saúde </h1>
+    <!-- Campo: Informação de Saúde -->
+    <div class="mb-3">
+     <label class="form-label" for="deficiencia" style="font-weight: bold;"> É portador de alguma deficiência? Especifica-a </label>
+     <input class="form-control" id="deficiencia" name="deficiencia" type="text" />
+    </div>
+    <div class="mb-3">
+     <label class="form-label" for="necesidades" style="font-weight: bold;"> Tem necessidades especiais? Especifica-a </label>
+     <input class="form-control" id="necessidades" name="necessidades" type="text" />
+    </div>
+    <div class="mb-3">
+     <label class="form-label" for="alergia" style="font-weight: bold;"> Alguma alergia? Especifica-a </label>
+     <input class="form-control" id="alergia" name="alergia" type="text" />
+    </div>
+    <div class="mb-3">
+     <label class="form-label" for="medicacao" style="font-weight: bold;"> Alguma medicação importante? Especifica-a </label>
+     <input class="form-control" id="medicacao" name="medicacao" type="text" />
+    </div>
+
+
+    <!-- Botão de envio -->
+    <div class="botoes-login">
+     <button type="submit" class="btn btn-success">Cadastrar</button>
+    </div>
+   </form>
+  </main>
+
+   
+  
+  <!-- ---------- FOOTER---------- -->
+  <footer class="footer">
+   <div class="footer-container">
+    <div class="footer-left">
+     <div class="logo">
+      <img alt="IPCA Logo" src="imagem/logo.png"/>
+      <p> POLITÉCNICO DO CÁVADO E DO AVE </p>
+     </div>
+     <div class="campus-info1">
+      <div>
+       <img alt="pin" src="icons/pin.png"/>
+       <h4> CAMPUS DO IPCA | BARCELOS </h4>
+       <p> Vila Frescainha S. Martinho <br/> 4750-810 Barcelos </p>
+      </div>
+      <div>
+       <img alt="pin" src="icons/pin.png"/>
+       <h4> SEDE ETESP | POLO DE BRAGA </h4>
+       <p> Av. Dr. Francisco Pires Gonçalves <br/> 4715-558 Braga </p>
+      </div>
+      <div>
+       <img alt="pin" src="icons/pin.png"/>
+       <h4> POLO DE FAMALICÃO </h4>
+       <p> Avenida de Tibães, nº1199 <br/> Vale S.Cosme <br/> 4770-568 V. N. Famalicão </p>
+      </div>
+     </div>
+     <div class="campus-info2">
+      <div>
+       <img alt="pin" src="icons/pin.png"/>
+       <h4> POLO DE GUIMARÃES </h4>
+       <p> Avepark - Zona Industrial da <br/> Gandra, S. Cláudio do Barco <br/> 4806-909 Caldas das Taipas </p>
+      </div>
+      <div>
+       <img alt="pin" src="icons/pin.png"/>
+       <h4> POLO DE ESPOSENDE </h4>
+       <p> Rua Sra. da Saúde <br/> 4740-289 Esposende </p>
+      </div>
+      <div>
+       <img alt="pin" src="icons/pin.png"/>
+       <h4> POLO DE VILA VERDE </h4>
+       <p> Rua do Conhecimento <br/> 4730-575 Soutelo </p>
+      </div>
+     </div>
+    </div>
+    <div class="footer-right">
+     <div class="europe-direct">
+      <img alt="Europe Direct Minho" src="icons/europe-direct.png"/>
+      <p> Quer saber mais sobre a União Europeia e participar num debate sobre o seu futuro? </p>
+     </div>
+     <div class="footer-buttons">
+      <button> Sugestões, Elogios ou Reclamações </button>
+      <button> Denúncias/Queixas </button>
+     </div>
+     <div class="contacts">
+      <p> (+351) 253 802 190 | geral@ipca.pt </p>
+      <div class="social-icons">
+       <img alt="Facebook" src="icons/facebook.svg"/>
+       <img alt="Instagram" src="icons/instagram.svg"/>
+       <img alt="LinkedIn" src="icons/linkedIn.svg"/>
+       <img alt="Email" src="icons/email.svg"/>
+       <img alt="YouTube" src="icons/youtube.svg"/>
+      </div>
+     </div>
+     <div class="logos">
+      <img alt="Norte 2020" src="imagem/logo2.png"/>
+     </div>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>Copyright IPCA - Instituto Politécnico do Cávado e do Ave</p>
+   </div>
+  </footer>
+  
+
+ </body>
+</html>
